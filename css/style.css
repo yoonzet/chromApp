@@ -1,0 +1,446 @@
+/* 노멀라이징*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* 라이브러리 */
+.cell {
+    float: left;
+}
+
+.row::after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+/* 폰트 */
+@font-face {
+    font-family: 'KOTRAHOPE';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRAHOPE.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 스타일 */
+body{ 
+    font-family: 'KOTRAHOPE';
+    letter-spacing:2px;
+}
+
+/* ------------< top >------------ */
+.hidden{
+    display: none;
+}
+.form-hidden{
+    opacity: 0;
+    transform: scale(0);
+}
+
+.bg{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -2;
+    background-image: url('../img/cloud.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* 로그인 */
+.login-bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 66;
+    background-image: url('../img/cloud.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: blur(10px);
+}
+
+.login-form {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 66;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(77, 126, 190);
+    font-size: 25px;
+    text-align: center;
+}
+.login .login-form input{
+    all: unset;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+    margin-top: 50px;
+}
+.greeting{
+    height: 35px;
+    border-radius: 50px;
+    padding: 0 20px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(77, 126, 190);
+
+}
+.greeting p{
+    font-size: 25px;
+}
+.greeting p:nth-child(2){
+    font-size:20px;
+    opacity: 0.8;
+    line-height: 35px;
+    margin-right: 15px;
+}
+.greeting i:hover{
+    transform: scale(0.9);
+    cursor: pointer;
+}
+
+
+
+.top{
+    width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ 
+.top .section{
+    width: calc(100% / 3);
+}
+.top .section1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.top .section2{
+    height: 100%;
+    color: white;    
+    text-align: center;
+    transform: translateY(30%);
+    padding: 0 20px;
+}
+.top .section3 {
+    color: #666; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(20%);
+
+}
+
+/* d-Day */
+.d-day{
+    width: 300px;
+    transform: translateY(15px);
+    
+}
+.d-day .add-btn{
+    all: unset;
+    width: 300px;
+    height: 70px;
+    background-color: #fff9;
+    /* border: 1px solid rgb(42, 173, 101) ; */
+    border-radius: 12px;
+    box-shadow: 0 1px 3px #8889 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'KOTRAHOPE';
+    color: rgb(42, 173, 101);
+    font-size: 30px;
+}
+.d-day .add-btn:hover {
+    transform: scale(0.99);
+}
+.d-day .add-btn i{
+    margin-left: 20px;
+}
+.d-day .d-day-form{
+    width: 300px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px #8889 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing:0px;
+    color: #666;
+    position: absolute;
+    top: 0px;
+}
+.d-day h1{
+    font-family: 'KOTRAHOPE';
+    font-size: 35px;
+    color: rgb(42, 173, 101);
+    margin-top: 15px;
+}
+.d-day .input{
+    all: unset;
+    width: 200px;
+    border-bottom: 1px solid #666;
+    padding-bottom: 5px;
+    line-height: 25px;
+    margin: 20px 0;
+}
+.d-day .btn{
+    all: unset;
+    font-weight: 200;
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+    background-color: rgb(42, 173, 101);
+    border-radius: 6px;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    margin: 15px 5px;
+}
+.d-day .btn:first-child{
+    background-color: transparent;
+    border: 1px solid rgb(42, 173, 101);
+    color: rgb(42, 173, 101);
+}
+.d-day .btn:hover{
+    transform: scale(0.99);
+    opacity: 0.9;
+}
+.d-day .d-daybox{
+    width: 300px;
+    height: 300px;
+    
+}
+.d-day .d-daybox li{
+    background-color: rgb(42, 173, 101);
+    border-radius: 12px;
+    padding: 20px 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+.d-day .d-daybox li button{
+    all: unset;
+    font-size: 30px;
+}
+.d-day .d-daybox li button:hover{
+    transform: scale(0.9);
+}
+
+
+/* 시계 */
+.top .clock h1{
+    font-size: 30px;  
+}
+.top .clock p{
+    font-size: 70px;  
+}
+
+/* 명언 */
+.top .quote{
+    margin-top: 20px;
+    font-size: 20px;
+}
+.top .quote div:last-child{
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+/* 캘린더 */
+.top .calendar{
+    width: 50%;
+    min-width: 300px;
+    /* height: 80%; */
+    padding: 15px 15px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    background-color: #fff8;
+    box-shadow: 0 1px 3px #8889 ;
+}
+.month{
+    width: 100%;
+    height: 100px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.month i{
+    font-size: 18px;
+    cursor: pointer;
+    color: #999;
+}
+    
+.month h1{
+    font-size: 35px;
+    text-transform: uppercase;
+    initial-letter: 2px;
+    margin-top: 5px;
+    color: rgb(77, 126, 190);
+}
+
+.month p{
+    font-size: 20px;
+    color: rgb(77, 126, 190);
+}
+.weekdays{
+    width: 100%;
+    height: 50px;
+    padding: 0 4px;
+    display: flex;
+    align-items: center;
+}
+
+.weekdays div{
+    font-size: 16px;
+    color: #888;
+    width: calc(100%/7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.weekdays div:first-child{
+    color: tomato;
+}
+
+.days{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.days div{
+    font-size: 15px;
+    width: calc(100%/7);
+    height: 25px;
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.days div:hover{
+ opacity: 0.5;
+}
+
+.prev-date,
+.next-date{
+    opacity: 0.5;
+}
+
+.today{
+    background-color: cornflowerblue;
+    border-radius: 8px;
+    color: #fff;
+}
+/* ------------< todo  >------------ */
+/* 투두리스트 */
+.todo{
+    width: 300px;
+    height: 80%;
+    /* background-color: #333; */
+}
+.todo .title{
+    width: 100%;
+    height: 10%;
+    /* background-color: #eee; */
+    display: flex;
+    align-items: center;
+}
+.todo .box-wrap{
+    width: 100%;
+    height: 90%;
+}
+.todo .box-wrap .box{
+    width: 100%;
+    height: 100%;
+    margin-right: 5px;
+    background-color: #FAFAFA;
+    opacity: 76%;
+    border-radius: 12px;
+    position: relative;
+}
+.todo .box-wrap .box p{
+    text-align: center;
+    font-size: 22px;
+    margin-top: 15px;
+}
+.todo .box-wrap .box input{
+    border: 0px solid black;
+    border-radius: 10px;
+    background-color: #9995;
+    outline: none;
+    width: 90%;
+    height: 30px;
+    transform: translateX(5%);
+    margin: 20px 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.todo .box-wrap .box ul span{
+    margin-left: 20px;
+    line-height: 30px;
+}
+.todo .box-wrap .box ul button{
+    border: 0px solid black;
+    background-color: transparent;
+    position: absolute;
+    font-size: 20px;
+    color: #888;
+    line-height: 30px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.todo .clear {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    color: #888;
+    cursor: pointer;
+}
