@@ -19,6 +19,7 @@
     <script defer src="./js/quotes.js"></script>
     <script defer src="./js/todo-list.js"></script>
     <script defer src="./js/calendar.js"></script>
+    <script defer src="./js/weather.js"></script>
 </head>
 
 <body>
@@ -30,14 +31,11 @@
             <input type="text" placeholder="What your name?">
         </form>
     </div>
-        <div class="greeting">
-            <p></p>
-            <p>'s Planner</p>
-            <i class="fas fa-sign-out-alt logout"></i>
-        </div>
-
-    
-
+    <div class="greeting">
+        <p></p>
+        <p>'s Planner</p>
+        <i class="fas fa-sign-out-alt logout"></i>
+    </div>
     <div class="top row">
         <div class="section section1 cell">
             <div class="todo">
@@ -53,23 +51,25 @@
                         <ul class="todo-list">
                         </ul>
                         <div class="clear">clear</div>
-        
+
                     </div>
                 </div>
             </div>
+            <div class="center-wrap">
+                <div class="weather">
+                    <span></span>
+                    <img class="weather-icon">
+                </div>
+                <div class="clock">
+                    <h1></h1>
+                    <p>00:00</p>
+                </div>
+                <div class="quote">
+                    <div></div>
+                    <div></div>
+                </div>
         </div>
         <div class="section section2 cell">
-            <div class="clock">
-                <h1></h1>
-                <p>00:00</p>
-            </div>
-            <div class="quote">
-                <div></div>
-                <div></div>
-            </div>
-            
-        </div>
-        <div class="section section3 cell">
             <div class="calendar">
                 <div class="month">
                     <i class="fas fa-angle-left prev"></i>
@@ -93,7 +93,7 @@
             </div>
             <div class="d-day">
                 <button class="add-btn">
-                    <p>D-DAY</p> 
+                    <p>D-DAY</p>
                     <i class="fa-solid fa-pen-to-square"></i>
                 </button>
                 <form class="d-day-form form-hidden">
@@ -109,10 +109,18 @@
                 <ul class="d-daybox">
                 </ul>
             </div>
-            
+
         </div>
+        
+
+
+        </div>
+        
     </div>
-    
+    <div class="bookmark"></div>
+
+
+
 
 
 
