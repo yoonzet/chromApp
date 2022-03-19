@@ -51,12 +51,12 @@ body{
     transform: scale(0);
 }
 
-.bg img{
+.bg{
     width: 100%;
     height: 100vh;
     position: absolute;
     z-index: -2;
-    background-image: url('../img/cloud.jpeg');
+    /* background-image: url('../img/00.jpeg'); */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -68,7 +68,7 @@ body{
     height: 100%;
     position: absolute;
     z-index: 66;
-    background-image: url('../img/cloud.jpeg');
+    /* background-image: url('../img/cloud.jpeg'); */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
