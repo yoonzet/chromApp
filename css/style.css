@@ -36,6 +36,12 @@ a {
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'JSongMyung-Regular-KO';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/JSongMyung-Regular-KO.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 /* 스타일 */
 body{ 
     font-family: 'KOTRAHOPE';
@@ -56,7 +62,7 @@ body{
     height: 100vh;
     position: absolute;
     z-index: -2;
-    background-image: url('../img/00.jpeg');
+    /* background-image: url('../img/00.jpeg'); */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -193,16 +199,23 @@ body{
 }
 .todo .box-wrap .box input{
     all: unset;
-    border-bottom: 1px solid rgb(77, 126, 190);
+    background-color: #fff;
+    border-radius: 8px;
     width: 90%;
     margin: 20px 0;
     line-height: 30px;
-}
+    text-align: left;
+    padding-left: 15px;
+    box-sizing: border-box;
 
+}
+.todo .box-wrap .box ul li{
+    text-align: left;
+
+}
 .todo .box-wrap .box ul span{
     margin-left: 20px;
     line-height: 30px;
-    text-align: left;
 }
 .todo .box-wrap .box ul button{
     border: 0px solid black;
@@ -250,10 +263,8 @@ body{
     transform: scale(0.99);
 }
 .d-day .add-btn i{
-    margin-left: 20px;
-}
-.d-day div{
-
+    margin-left: 15px;
+    font-size: 20px;
 }
 .d-day .d-day-form{
     width: 300px;
