@@ -75,9 +75,6 @@ function dDaySubmit(event){
     saveDdays();
 
     dDayForm.classList.add(HIDDEN_CLASS);
-
-
-
 }
 
 function formHidden(){
@@ -95,4 +92,7 @@ if (savedDdays !== null){
     const parsedDdays = JSON.parse(savedDdays);
     dDays = parsedDdays;
     parsedDdays.forEach(printDday);
+}
+if(savedDdays.length < 3){
+    dDayForm.classList.remove(HIDDEN_CLASS); 
 }
